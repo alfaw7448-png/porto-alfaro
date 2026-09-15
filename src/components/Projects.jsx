@@ -2,36 +2,42 @@ import { projects } from '../data'
 
 export default function Projects() {
   return (
-    <section id="projects" className="px-6 py-20">
-      <div className="mx-auto max-w-6xl">
-        <h2 className="text-center text-3xl font-bold text-gray-900 md:text-4xl">
-          Proyek <span className="text-blue-600">Portofolio</span>
-        </h2>
-        <p className="mx-auto mt-4 max-w-xl text-center text-gray-600">
-          Beberapa proyek yang pernah saya kerjakan. Klik foto untuk melihat
-          detailnya.
-        </p>
+    <section id="projects" className="relative w-full min-h-screen flex items-center justify-center">
+      <div className="max-w-[1400px] mx-auto px-8 md:px-14 lg:px-20 xl:px-24 py-16">
+        <div className="text-center mb-16">
+          <p className="text-blue-400 text-xl md:text-2xl mb-4">Portofolio</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            Proyek <span className="gradient-text">Terbaru</span>
+          </h2>
+          <p className="text-gray-400 text-xl leading-relaxed">
+            Beberapa proyek yang pernah saya kerjakan.
+          </p>
+        </div>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2">
-          {projects.map((p) => (
-            <div
-              key={p.title}
-              className="group overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-200"
-            >
-              <a href={p.link} target="_blank" rel="noreferrer" className="block">
-                <div className="overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={p.title}
-                    className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
+          {projects.map((project) => (
+            <div key={project.title} className="card-hover rounded-2xl overflow-hidden group">
+              <a href={project.link} target="_blank" rel="noreferrer" className="block">
+                <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden">
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <span className="inline-flex items-center gap-2 text-white text-lg font-semibold">
+                        Lihat Proyek
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900">{p.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600">{p.desc}</p>
-                  <span className="mt-4 inline-flex items-center gap-1 font-semibold text-blue-600">
-                    Kunjungi Proyek →
-                  </span>
+                <div className="p-6 sm:p-8">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">{project.title}</h3>
+                  <p className="text-gray-400 text-lg leading-relaxed mb-4">{project.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-4 py-1 text-sm rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">Web</span>
+                    <span className="px-4 py-1 text-sm rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30">React</span>
+                  </div>
                 </div>
               </a>
             </div>

@@ -35,13 +35,13 @@ export const services = [
 export const projects = [
   {
     title: 'Project 1',
-    desc: 'Deskripsi singkat project pertama kamu. Jelaskan apa yang dibuat dan teknologi yang dipakai.',
+    desc: 'EcoBank adalah aplikasi web manajemen bank sampah berbasis dasbor digital yang dirancang untuk mempermudah pengelolaan operasional, pencatatan transaksi setor sampah, dan pencairan saldo nasabah/pelanggan secara efisien dan terstruktur.',
     image: project1Img,
     link: 'https://ecobank-sigma.vercel.app/',
   },
   {
     title: 'Project 2',
-    desc: 'Deskripsi singkat project kedua kamu. Jelaskan apa yang dibuat dan teknologi yang dipakai.',
+    desc: 'whatsapp yang saya desain di Figma ini adalah rancangan desain APK kirim pesan yang hampir sama cara kerjannya dengan whatsapp yang pada umumnya tapi ini ada beberapa yang berbedan dari warna dan desain di dalamnya, dan fitur yang berbedan.',
     image: project2Img,
     link: 'https://www.figma.com/design/3UikL0FYym9fCVloQOoBy1/WhatsApp-UI-Alfaro-NK?node-id=1126-517&t=bZKdEkZyraOiHxGP-1',
   },
