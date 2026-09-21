@@ -32,9 +32,9 @@ const socials = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative w-full min-h-screen flex items-center justify-center">
-      <div className="max-w-[1400px] mx-auto px-8 md:px-14 lg:px-20 xl:px-24 py-16">
-        <div className="text-center mb-16">
+    <section id="contact" className="relative w-full flex items-center justify-center py-20 lg:min-h-screen lg:py-24 mb-6 lg:mb-10">
+      <div className="max-w-[1400px] mx-auto px-8 md:px-14 lg:px-20 xl:px-24">
+        <div className="text-center mb-20 lg:mb-24">
           <p className="text-blue-400 text-xl md:text-2xl mb-4">Kontak</p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
             Hubungi <span className="gradient-text">Saya</span>
@@ -42,16 +42,16 @@ export default function Contact() {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="relative mb-10">
+          <div className="relative mb-12">
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-xl"></div>
             <img src={profile.photo} alt={profile.name} className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full border-4 border-white/10 object-cover shadow-2xl" />
           </div>
 
-          <p className="text-center text-gray-400 text-xl md:text-2xl max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-center text-gray-400 text-xl md:text-2xl max-w-2xl mx-auto mb-14 leading-relaxed">
             Jangan ragu untuk menghubungi saya melalui platform di bawah ini.
           </p>
 
-          <div className="flex flex-col gap-4 w-full max-w-4xl">
+          <div className="flex flex-col gap-5 w-full max-w-4xl">
             {socials.map((social) => (
               <a key={social.name} href={social.href} target="_blank" rel="noreferrer" className="card-hover rounded-2xl p-5 sm:p-6 flex items-center gap-4 sm:gap-5 group">
                 <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${social.color} flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform duration-300`}>

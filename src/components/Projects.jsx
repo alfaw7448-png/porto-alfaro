@@ -2,11 +2,11 @@ import { projects } from '../data'
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative w-full min-h-screen flex items-center justify-center">
-      <div className="max-w-[1400px] mx-auto px-8 md:px-14 lg:px-20 xl:px-24 py-16">
-        <div className="text-center mb-16">
+    <section id="projects" className="relative w-full flex items-center justify-center py-20 lg:min-h-screen lg:py-24 mb-6 lg:mb-10">
+      <div className="max-w-[1400px] mx-auto px-8 md:px-14 lg:px-20 xl:px-24">
+        <div className="text-center mb-20 lg:mb-24">
           <p className="text-blue-400 text-xl md:text-2xl mb-4">Portofolio</p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5">
             Proyek <span className="gradient-text">Terbaru</span>
           </h2>
           <p className="text-gray-400 text-xl leading-relaxed">
@@ -14,7 +14,7 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {projects.map((project) => (
             <div key={project.title} className="card-hover rounded-2xl overflow-hidden group">
               <a href={project.link} target="_blank" rel="noreferrer" className="block">
@@ -33,7 +33,7 @@ export default function Projects() {
                 </div>
                 <div className="p-6 sm:p-8">
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                  <p className="text-gray-400 text-lg leading-relaxed mb-4">{project.desc}</p>
+                  <p className="text-gray-400 text-lg leading-relaxed mb-5">{project.desc}</p>
                   <div className="flex flex-wrap gap-2">
                     <span className="px-4 py-1 text-sm rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">Web</span>
                     <span className="px-4 py-1 text-sm rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30">React</span>

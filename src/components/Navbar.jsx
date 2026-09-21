@@ -23,10 +23,10 @@ export default function Navbar() {
       <nav className="w-full flex items-center justify-between px-8 md:px-14 lg:px-20 xl:px-24 py-6">
         <a href="#home" className="text-4xl font-bold gradient-text">ALFARO<span className="text-blue-400">.</span></a>
 
-        <ul className="hidden items-center gap-8 lg:gap-12 md:flex">
+        <ul className="hidden items-center gap-6 lg:gap-10 xl:gap-14 md:flex">
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="text-xl text-gray-300 transition-colors hover:text-white relative group">
+              <a href={l.href} className="text-lg lg:text-xl text-gray-300 transition-colors hover:text-white relative group">
                 {l.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
@@ -34,7 +34,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <a href="#contact" className="hidden md:inline-block btn-primary text-lg px-10 py-4">Hubungi Saya</a>
+        <a href="#contact" className="hidden lg:inline-block btn-primary text-lg px-10 py-4">Hubungi Saya</a>
 
         <button aria-label="Menu" onClick={() => setOpen(!open)} className="md:hidden text-4xl text-white">
           {open ? '✕' : '☰'}

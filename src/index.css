@@ -9,12 +9,6 @@
   --text-muted: #94a3b8;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -106,17 +100,37 @@ body {
 
 /* Card hover effect */
 .card-hover {
-  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
 }
 
+.card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .card-hover:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   border-color: rgba(59, 130, 246, 0.5);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
               0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+.card-hover:hover::before {
+  left: 140%;
 }
 
 /* Scrollbar */

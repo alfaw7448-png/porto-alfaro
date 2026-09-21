@@ -7,22 +7,21 @@ const skills = [
   { name: 'React', level: 90 },
   { name: 'Tailwind', level: 75 },
   { name: 'Laravel', level: 80 },
-  { name: 'Flutter', level: 50},
-  { name: ''}
+  { name: 'Flutter', level: 50 },
 ]
 
 export default function About() {
   return (
-    <section id="about" className="relative w-full min-h-screen flex items-center justify-center">
-      <div className="max-w-[1400px] mx-auto px-8 md:px-14 lg:px-20 xl:px-24 py-16">
-        <div className="text-center mb-16">
+    <section id="about" className="relative w-full flex items-center justify-center py-20 lg:min-h-screen lg:py-24 mb-6 lg:mb-10">
+      <div className="max-w-[1400px] mx-auto px-8 md:px-14 lg:px-20 xl:px-24">
+        <div className="text-center mb-20 lg:mb-24">
           <p className="text-blue-400 text-xl md:text-2xl mb-4">Tentang Saya</p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
             Kenali <span className="gradient-text">Saya</span> Lebih Dekat
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex-shrink-0 flex justify-center">
             <div className="relative">
               <div className="absolute -inset-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
@@ -34,15 +33,15 @@ export default function About() {
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Saya adalah <span className="gradient-text">{profile.name}</span>
             </h3>
-            <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed mb-4">
+            <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed mb-6">
               Seorang {profile.role} yang passionate dalam menciptakan pengalaman digital yang menarik dan fokus pada detail. Saya senang mengubah ide menjadi website yang tidak hanya terlihat bagus, tetapi juga berfungsi dengan baik.
             </p>
-            <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed mb-10">
+            <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed mb-12">
               Dengan pengalaman dalam pengembangan web modern, saya berkomitmen untuk memberikan solusi terbaik yang sesuai dengan kebutuhan klien.
             </p>
 
-            <div className="space-y-5 mb-10">
-              <h4 className="text-2xl font-semibold text-white mb-5">Keahlian Saya</h4>
+            <div className="space-y-6 mb-12">
+              <h4 className="text-2xl font-semibold text-white mb-6">Keahlian Saya</h4>
               {skills.map((skill) => (
                 <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between text-lg">
@@ -54,9 +53,7 @@ export default function About() {
                   </div>
                 </div>
               ))}
-
             </div>
-
 
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center p-6 rounded-xl bg-white/5 border border-white/10">
